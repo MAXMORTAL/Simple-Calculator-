@@ -10,12 +10,13 @@ const calculate = (btnValue) => {
       const parsed = output.replace(/(\d+(?:\.\d+)?)([+\-])(\d+(?:\.\d+)?)%/g, (match, base, operator, percent) => {
         return `${base}${operator}(${base}*${percent}/100)`;
       });
-
+      
       let result = eval(parsed);
       let rounded = result.toFixed(3).replace(/\.?0+$/, "");
       output = rounded;
         
-    } catch {
+    } 
+    catch {
       output = "Error";
     }
   } else if (btnValue === "AC") {

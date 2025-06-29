@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -8,7 +10,8 @@ body {
 }
 
 .container {
-  max-width: 300px;
+  height: 100vh;
+  max-width: 100vh;
   width: 100%;
   position: relative;
   background: black;
@@ -20,17 +23,21 @@ body {
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
+  gap: 20px;
+  grid-row-gap: 50px;
+}  
 
 .buttons button {
+  height: 190px;
+  weight: 190px;
   border: none;
   background: #2e2e2e;
   color: white;
   padding: 20px;
   border-radius: 50%;
-  font-size: 14px;
+  font-size: 44px;
   font-weight: bold;
+  box-shadow: 1px 5px #242424;
 }
 
 .display {
@@ -38,14 +45,15 @@ body {
   outline: none;
   pointer-events: none;
   width: 100%;
-  height: 150px;
+  height: 300px;
   border-radius: 12px;
   background: black;
-  font-size: 30px;
+  font-size: 120px;
   text-align: right;
   color: white;
-  margin-bottom: 10px;
+  margin: 20px 0;
 }
+
 
 .buttons button:active {
   transform: scale(0.95);
@@ -54,4 +62,12 @@ body {
 
 .buttons .operators {
   background: #ff7300;
+  box-shadow: 1px 5px #542600;
+}
+
+.display1 {
+  position: block;
+  background-color: black;
+  height: 300px;
+  border: none;
 }
