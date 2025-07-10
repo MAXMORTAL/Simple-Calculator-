@@ -1,6 +1,8 @@
 const display = document.querySelector('.display');
 const buttons = document.querySelectorAll('button');
 const specialChars = ["%", "/", "*", "-", "+", "="];
+const lightIcon = document.getElementById("light-icon");
+const darkIcon = document.getElementById("dark-icon");
 
 let output = "";
 
@@ -35,4 +37,14 @@ const calculate = (btnValue) => {
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => calculate(e.target.dataset.value));
 });
+
+
+function toggleTheme() {
+  document.body.classList.toggle("light-theme");
+}
+
+lightIcon.addEventListener("click", toggleTheme);
+darkIcon.addEventListener("click", toggleTheme);
+
+
 

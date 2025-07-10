@@ -15,7 +15,7 @@ body {
   width: 100%;
   position: relative;
   background: black;
-  padding: 10px 20px 20px;
+  padding: 10px 10px 20px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.05);
 }
@@ -25,6 +25,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   grid-row-gap: 50px;
+  padding-top: 70px;
 }  
 
 .buttons button {
@@ -46,7 +47,7 @@ body {
   pointer-events: none;
   width: 100%;
   height: 300px;
-  border-radius: 12px;
+  border-radius: 25px;
   background: black;
   font-size: 120px;
   text-align: right;
@@ -68,6 +69,78 @@ body {
 .display1 {
   position: block;
   background-color: black;
-  height: 300px;
+  height: 150px;
   border: none;
+  margin-bottom: -50px;
 }
+
+.theme-bar {
+  background-color: #121212;
+  height: 150px;
+  width: 100%;
+  border-radius: 25px;
+  position: relative;
+  margin-bottom: -25px;
+}
+
+.light-mode, .dark-mode {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease;
+}
+
+
+body.light-theme .theme-bar {
+  background-color: #eeeeee;
+}
+
+body.light-theme {
+  background: rgb(255, 255, 255);
+}
+
+.light-mode {
+  display: none;
+}
+
+body.light-theme .light-mode {
+  display: inline;
+}
+
+body.light-theme .dark-mode {
+  display: none;
+}
+
+body.light-theme .container {
+  background: #ffffff;
+}
+
+body.light-theme .buttons button {
+  background: #e0e0e0;
+  color: black;
+  box-shadow: 1px 5px #eeeeee;
+}
+
+body.light-theme .buttons .operators {
+  background-color: #aab5ff;
+}
+
+body.light-theme .display,
+body.light-theme .display1 {
+  background: #f4f4f4;
+  color: black;
+}
+
+body,
+.container,
+.display,
+.display1,
+.buttons button,
+.theme-bar {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+
