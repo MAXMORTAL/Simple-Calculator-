@@ -12,6 +12,6 @@
 
 # Installation 
 • Download the `SimpleCalculator.apk` from the [Release](https://github.com/MAXMORTAL/Simple-Calculator-/releases) section. <br>
-• Click here to download immediately [SimpleCalculator.apk](https://github.com/MAXMORTAL/Simple-Calculator-/releases/download/Simple-Calculator-v1.0/simple-calculator.apk). <br>
+• Click here to download immediately [SimpleCalculator.apk](https://github.com/MAXMORTAL/Simple-Calculator-/releases/download/Simple-Calculator-v1.0/SimpleCalculator.apk). <br>
 • If you had already installed the previous version you can simple update it using the latest version's apk. <br>
 • If there is a problem in installation, then delete the previous version's apk and simple install the new one. <br>
