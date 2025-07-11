@@ -10,35 +10,65 @@ body {
 }
 
 .container {
-  height: 100vh;
-  max-width: 100vh;
+  height: 103vh;
+  max-width: 100vw;
   width: 100%;
   position: relative;
   background: black;
-  padding: 10px 10px 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  padding: 2vw;
+  border-radius: 3vw;
+  box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  grid-row-gap: 50px;
-  padding-top: 70px;
-}  
+  grid-gap: 4vw;
+  padding-top: 10vw;
+  box-sizing: border-box;
+  
+}
+
+.backspace-container {
+  height: 8vh;
+  background-color: #121212;
+  position: relative;
+  border-bottom: 0.5vw solid #ffffff;
+}
+
+.backspace-button {
+  position: absolute;
+  height: 11vw;
+  width: 11vw;
+  top: 2vw;
+  right: 5vw;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.backspace-button img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
 
 .buttons button {
-  height: 190px;
-  weight: 190px;
+  height: 18vw;
+  width: 18vw;
   border: none;
   background: #2e2e2e;
   color: white;
-  padding: 20px;
   border-radius: 50%;
-  font-size: 44px;
+  font-size: 6vw;
   font-weight: bold;
-  box-shadow: 1px 5px #242424;
+  box-shadow: 0.2vw 0.6vw #242424;
 }
 
 .display {
@@ -46,15 +76,15 @@ body {
   outline: none;
   pointer-events: none;
   width: 100%;
-  height: 300px;
-  border-radius: 25px;
+  height: 15vh;
+  border-radius: 5vw;
   background: black;
-  font-size: 120px;
+  font-size: 8vw;
   text-align: right;
   color: white;
-  margin: 20px 0;
+  margin: 4vw 0 -6vw;
+  
 }
-
 
 .buttons button:active {
   transform: scale(0.95);
@@ -63,35 +93,38 @@ body {
 
 .buttons .operators {
   background: #ff7300;
-  box-shadow: 1px 5px #542600;
+  box-shadow: 0.2vw 0.6vw #542600;
 }
 
 .display1 {
-  position: block;
-  background-color: black;
-  height: 150px;
+  display: block;
+  height: 10vh;
   border: none;
-  margin-bottom: -50px;
+  margin-bottom: -6vw;
+  background: black;
 }
+
 
 .theme-bar {
   background-color: #121212;
-  height: 150px;
+  height: 10vh;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 3vw;
   position: relative;
-  margin-bottom: -25px;
+  margin-bottom: -4vw;
+  
 }
 
-.light-mode, .dark-mode {
+.light-mode,
+.dark-mode {
   position: absolute;
-  height: 100px;
-  width: 100px;
-  top: 20px;
-  right: 20px;
+  height: 11vw;
+  width: 11vw;
+  top: 3.5vw;
+  right: 4vw;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
-
 
 body.light-theme .theme-bar {
   background-color: #eeeeee;
@@ -101,15 +134,17 @@ body.light-theme {
   background: rgb(255, 255, 255);
 }
 
-.light-mode {
+.light-mode, .dark-button {
   display: none;
 }
 
-body.light-theme .light-mode {
+body.light-theme .light-mode,
+body.light-theme .dark-button {
   display: inline;
 }
 
-body.light-theme .dark-mode {
+body.light-theme .dark-mode,
+body.light-theme .light-button {
   display: none;
 }
 
@@ -120,7 +155,7 @@ body.light-theme .container {
 body.light-theme .buttons button {
   background: #e0e0e0;
   color: black;
-  box-shadow: 1px 5px #eeeeee;
+  box-shadow: 0.2vw 0.6vw #eeeeee;
 }
 
 body.light-theme .buttons .operators {
@@ -129,8 +164,13 @@ body.light-theme .buttons .operators {
 
 body.light-theme .display,
 body.light-theme .display1 {
-  background: #f4f4f4;
+  background-color: #f4f4f4;
   color: black;
+}
+
+body.light-theme .backspace-container {
+  background-color: #efefef;
+  border-bottom-color: #000000;
 }
 
 body,
@@ -138,9 +178,7 @@ body,
 .display,
 .display1,
 .buttons button,
-.theme-bar {
+.theme-bar,
+.backspace-container {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-
-
-

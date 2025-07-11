@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
   <meta charset="UTF-8">
   <title>Smart Calculator</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" href="assets/robot.svg" type="image/svg-xml">
+  <link rel="shortcut icon" href="robot.svg" type="image/svg-xml">
 </head>
 <body>
   <main class="container">
-    <div class="theme-bar">
-      <img src="assets/Theme/light_mode.svg" alt="" class="light-mode" id="light-icon">
-      <img src="assets/Theme/dark_mode.svg" alt="" class="dark-mode" id="dark-icon">
+    <div class="theme-bar"> 
+      <img src="light_mode.svg" alt="" class="light-mode" id="light-icon"> 
+      <img src="dark_mode.svg" alt="" class="dark-mode" id="dark-icon"> 
     </div>
+
     
     <div class="display1"></div>
     <input type="text" class="display">
     
+    <div class="backspace-container">
+      <button class="backspace-button light-button" id="light-backspace" data-value="DEL">
+        <img src="light-backspace.svg" alt="Backspace">
+      </button>
+      <button class="backspace-button dark-button" id="dark-backspace" data-value="DEL">
+        <img src="dark-backspace.svg" alt="Backspace">
+      </button>
+    </div>
+
+    
     <div class="buttons">
       <button class="operators" data-value="AC">AC</button>
-      <button class="operators" data-value="DEL">DEL</button>
-      <button class="operators" data-value="%">%</button>
+      <button class="operators" data-value="( )">&lpar; &nbsp; &rpar;</button>
+      <button class="operators" data-value="^">^</button>
       <button class="operators" data-value="/">/</button>
 
       <button data-value="7">7</button>
@@ -38,8 +51,8 @@
       <button class="operators" data-value="+">+</button>
 
       <button data-value="0">0</button>
-      <button data-value="00">00</button>
       <button data-value=".">.</button>
+      <button class="operators" data-value="%">%</button>
       <button class="operators" data-value="=">=</button>
     </div> 
   </main>
